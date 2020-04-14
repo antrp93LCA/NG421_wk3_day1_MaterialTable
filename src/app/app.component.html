@@ -2,32 +2,32 @@
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort >
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- ID Column -->
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef > ID </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
   </ng-container>
 
   <!-- Title Column -->
   <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef > Title </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
     <td mat-cell *matCellDef="let element"> {{element.title}} </td>
   </ng-container>
 
   <!-- Developer Column -->
   <ng-container matColumnDef="developer">
-    <th mat-header-cell *matHeaderCellDef > Developer </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header > Developer </th>
     <td mat-cell *matCellDef="let element"> {{element.developer}} </td>
   </ng-container>
 
   <!-- Date Created Column -->
-  <ng-container matColumnDef="dateCreated" >
-    <th mat-header-cell *matHeaderCellDef> Date Created </th>
+  <ng-container matColumnDef="dateCreated"  >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Created </th>
     <td mat-cell *matCellDef="let element"> {{element.dateCreated}} </td>
   </ng-container>
 

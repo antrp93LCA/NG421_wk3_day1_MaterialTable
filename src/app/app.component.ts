@@ -1,6 +1,7 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { IGameData } from './interfaces/igame-data';
 import {MatTableDataSource} from '@angular/material/table';
+import { MatSort } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -42,10 +43,13 @@ export class AppComponent implements OnInit {
     },
   ];
   displayedColumns: string[] = ['id', 'title', 'developer', 'dateCreated'];
-  dataSource:MatTableDataSource<IGameData> 
+  dataSource:MatTableDataSource<IGameData>;
+  
+  @ViewChild(MatSort) sort: MatSort;
   
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.GAME_DATA);
+    this.dataSource.sort = this.sort;
   }
   
   applyFilter(filterValue: string) {
