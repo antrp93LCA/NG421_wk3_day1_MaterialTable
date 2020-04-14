@@ -1,6 +1,6 @@
 export interface IGameData {
     id: number;
     title: string;
-    publisher: string;
+    developer: string;
     dateCreated: Date;
 }
