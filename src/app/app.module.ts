@@ -7,10 +7,12 @@ import {MatSortModule} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GameTableComponent } from './game-table/game-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameTableComponent
   ],
   imports: [
     BrowserModule,
