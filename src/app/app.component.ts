@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   displayedColumns: string[] = ['id', 'title', 'developer', 'dateCreated'];
   dataSource:MatTableDataSource<IGameData>;
   
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
   
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.GAME_DATA);
