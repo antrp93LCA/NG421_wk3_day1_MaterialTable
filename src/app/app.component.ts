@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   
   ngOnInit(): void {
-    this.dataSource = new MatTableDataSource(this.dataService.GAME_DATA);
+    this.dataSource = new MatTableDataSource(this.dataService.GetData());
     this.dataSource.sort = this.sort;
   }
   
